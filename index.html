@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Metacharacters Playground</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="icon" type="image/x-icon" href="images/js_icon_96.png">
+	<script type="text/javascript" src="js/myscripts.js"></script>
+	<body onload="timerUp()">
+		<div class="bg-image"><img src="images/bg-image.jpg"></div>
+		<h1 class="main-title" data-alttext="JS Regular Expressions"><span class="hide-when-narrow">JavaScript Regular Expressions</span></h1>
+		<div class="dropdown">
+		  <button onclick="dropDown()" class="dropbtn">Choose</button>
+		  <div id="myDropdown" class="dropdown-content">
+			<a href="html/01_metacharacter.html"><strong>.</strong>&nbsp;&nbsp;&nbsp;find a single character, except newline or line terminator</a>
+			<a href="html/02_metacharacter.html"><strong>\w</strong>&nbsp;&nbsp;&nbsp;find a word character</a>
+			<a href="html/03_metacharacter.html"><strong>\W</strong>&nbsp;&nbsp;&nbsp;find a non-word character</a>
+			<a href="html/04_metacharacter.html"><strong>\d</strong>&nbsp;&nbsp;&nbsp;find a digit</a>
+			<a href="html/05_metacharacter.html"><strong>\D</strong>&nbsp;&nbsp;&nbsp;find a non-digit character</a>
+			<a href="html/06_metacharacter.html"><strong>\s</strong>&nbsp;&nbsp;&nbsp;find a whitespace character</a>
+			<a href="html/07_metacharacter.html"><strong>\S</strong>&nbsp;&nbsp;&nbsp;find a non-whitespace character</a>
+			<a href="html/08_metacharacter.html"><strong>\b</strong>&nbsp;&nbsp;&nbsp;find a match at the beginning/end of a word</a>
+			<a href="html/09_metacharacter.html"><strong>\B</strong>&nbsp;&nbsp;&nbsp;find a match, but not at the beginning/end of a word</a>
+			<a href="html/10_metacharacter.html"><strong>\0</strong>&nbsp;&nbsp;&nbsp;find a NULL character</a>
+			
+		  </div>
+		</div>
+		
+		<form>
+			<div class="header_container">
+			<img src="images/js_icon_96.png" class="logo">
+			<h2><b>Metacharacters Playground</b></h2>
+			
+			<hr class="hr-short">
+			<p class="metachar">.</p>
+			<p class="descript">The . metacharacter matches any character, except newline or other line terminators.</p>
+			</div>
+	  
+			<div class="call_for_action">
+					<label id="minutes">00</label>
+					<label id="colon">:</label>
+					<label id="seconds">00</label>
+					<div class="popup" onclick="popUpInfo()">
+						<img src="images/info.png" class="info-img">
+						<span class="popuptext" id="myPopupInfo">
+						Press the Tab key in order to move faster through the form when exercising.</span>
+					</div>
+				<label for="input_id"><h3>Enter your example</h3></label>
+					<input type="text" id="input_id" class="input-prop" placeholder="Enter a character pattern, word or sentence..." autocomplete="off" tabindex="1">
+					<input type="text/javascript" id="pattern_id" class="input-prop" placeholder="Type in a metacharacter search pattern..." autocomplete="off" tabindex="2">
+					<input type="button" value="Run" onclick="myFunction1()" tabindex="3">
+					<input type="reset" value="Reset" onclick="myTip()" tabindex="4">
+					<div class="popup" onclick="popUp()"><span>[Click me to toggle the popup tip]</span>
+						<span class="popuptext" id="myPopup">
+						A word character is a character a-z, A-Z, 0-9, including _ (underscore).<br><br>
+						Try the following examples first. Then, create your own and exercise.<br><br> 
+						<b>Character pattern:</b> "cute cat" Has 4 _legs. <!--And weird (%6& 99+_] character."--><br>
+						<b>Metacharacter patterns:</b> ., ..., ...s, e.., c.t<br><br>
+						Note: Commas are not parts of the patterns.
+						</span>
+					</div>
+	  
+				<p id="result_id">You will see the result here</p>
+			</div>
+		</form> 
+		<footer>
+		<p>© Vladimir Jovanović :: DobarBREND 2022</p>
+		</footer>		
+		
+		
+		
+	</body>
+</html>
